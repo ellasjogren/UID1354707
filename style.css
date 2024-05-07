@@ -23,19 +23,16 @@
 /* HEADER */
 .container {
   display: flex;
-  
-  align-items: center; 
   padding: 10px;
+  flex-direction: column; 
+  align-items: center; 
 }
 
 /* LIST NAVIGATION */
 .menu {
   list-style-type: none;
   font-family: 'Courier New';
-  font-size: 22px;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  font-size: 22px; 
 }
 
 .menu li {
@@ -44,12 +41,12 @@
 }
 
 .menu li a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
+  text-decoration: underline;
+  color: rgb(0, 0, 0)
 }
-
 .menu li a:hover {
   text-decoration: underline;
+  color: purple
 }
 
 /* SEARCH BAR, CART, AND LOGIN BUTTONS */
@@ -74,33 +71,22 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 10px;
 }
 
 /* ABOUT US SECTION */
 .about-us {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
 
-.subtitle {
+.subtitle, .jackrussell {
   flex: 1; 
   padding-right: 50px; 
 }
 
-.subtitle img {
+.subtitle img, .jackrussell img {
   margin-bottom: 10px;
-  display: block; 
-}
-
-.jackrussell {
-  flex: 1; 
-  text-align: right;
-}
-
-.jackrussell img {
   display: block; 
 }
 
@@ -109,4 +95,77 @@
   text-align: justify;
   font-family: 'Courier New';
   font-size: 17px;
+}
+
+/* PRODUCTS */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-size: 22px;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Courier New'
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+.title {
+  color: black;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #6DBCF2;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+/* SECONDARY TEXT SECTION */
+.our-story {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #2B3B41;
+}
+
+.secondarytext {
+  width: 45%; 
+
+}
+
+.secondarytext img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.secondarytext p {
+  line-height: 1.5;
+  text-align: justify;
+  font-family: 'Courier New';
+  font-size: 17px;
+  color: white
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
