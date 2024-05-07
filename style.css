@@ -1,0 +1,112 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BANNER */
+#headerbox {
+  background-color: #6dbcf2 ;
+  padding: 10px 20px; 
+  text-align: center;
+  font-family: 'Courier New';
+  font-style: italic;
+  color: white;
+}
+
+/* LOGO */
+.logo {
+  text-align: center; 
+}
+
+/* HEADER */
+.container {
+  display: flex;
+  
+  align-items: center; 
+  padding: 10px;
+}
+
+/* LIST NAVIGATION */
+.menu {
+  list-style-type: none;
+  font-family: 'Courier New';
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.menu li {
+  margin-right: 20px;
+  display: inline; 
+}
+
+.menu li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+/* SEARCH BAR, CART, AND LOGIN BUTTONS */
+.right-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  padding: 6px;
+  border: 3px solid coral;
+  font-family: 'Courier New';
+  font-size: 17px;
+}
+
+.cart, .login {
+  padding: 6px 10px;
+  background-color: #f7931e;
+  font-family: 'Courier New';
+  font-size: 17px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* ABOUT US SECTION */
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.subtitle {
+  flex: 1; 
+  padding-right: 50px; 
+}
+
+.subtitle img {
+  margin-bottom: 10px;
+  display: block; 
+}
+
+.jackrussell {
+  flex: 1; 
+  text-align: right;
+}
+
+.jackrussell img {
+  display: block; 
+}
+
+.subtitle p {
+  line-height: 1.5;
+  text-align: justify;
+  font-family: 'Courier New';
+  font-size: 17px;
+}
