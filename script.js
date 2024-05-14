@@ -12,3 +12,8 @@ function search_website(event) {
         }
     });
 }
+document.getElementById('add-to-cart').addEventListener('click', function() {
+    var quantity = document.getElementById('quantity').value;
+    alert('Added ' + quantity + ' to cart!');
+  });
+  
