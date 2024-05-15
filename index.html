@@ -31,13 +31,51 @@
             </div>
             <div class="buttons">
                 <input type="text" placeholder="Search.." class="search">
-                <button class="cart">Cart</button>
+                <button class="cart" onclick="showCart()">Cart</button>
                 <button class="login">Log In</button>
             </div>
         </div>
+    </header>
+    <div class="cart-popup" id="cartPopup">
+        <img src="cart.png" width="180" height="35">
+        <hr>
+        <br>
+        <br>
+        <ul class="shopping-cart-items">
+            <li class="products">
+              <img src="chickenveg.png" alt="item1" width="150" height="150"/>
+              <br>
+              <span class="item-name"><i>EcoPet Chicken and Vegetable 1KG</i></span>
+              <br>
+              <span class="item-price">$6.50</span>
+              <br>
+            </li>
+      <br>
+      <hr>
+      <br>
+            <li class="products">
+              <img src="pigsear2.png" alt="item1" width="150" height="150"/>
+              <br>
+              <span class="item-name"><i>Pigs Ear 5 Pack</i></span>
+              <br>
+              <span class="item-price">$11.00</span>
+              <br>
+            </li>
+          </ul>
+          <br>
+          <hr>
+          <br>
+          <i><b>PRICE</i></b>
+          <span class="item-total"><i>$17.50</i></span>
+          <br>
+          <i><b>SHIPPING</i></b>
+          <span class="item-shipping"><i>Calculated at Checkout</i></span>
+          <hr>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+      
     <br>
-   
-   
+
     <div class="about-us">
         <div class="subtitle">
             <img src="subtitle.png" alt="Subtitle" width="470" height="100">
@@ -92,8 +130,8 @@
             <p><button>Add to Cart</button></p>
         </div>
     </div>
-
-
+<br>
+<br>
 
     <div id="headerbox4"></div>
 <div class="our-story">
