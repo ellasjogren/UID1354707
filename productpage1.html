@@ -19,7 +19,7 @@
 <header>
     <header>
     
-    
+    <!-- HEADER -->
         <div class="container">
             <div class="menu">
                 <ul class="menu"> 
@@ -31,12 +31,31 @@
             </div>
             <div class="buttons">
                 <input type="text" placeholder="Search.." class="search">
-                <button class="cart">Cart</button>
+                <button class="cart" onclick="toggleCart()">Cart</button>
                 <button class="login">Log In</button>
             </div>
         </div>
     <br>
 
+    <!-- SHOPPING CART -->
+<div class="cart-popup" id="cartPopup">
+    <img src="cart.png" width="180" height="35">
+    <hr>
+    <br>
+    <ul class="shopping-cart-items" id="cartItems"></ul>
+    <br>
+    <hr>
+    <br>
+    <i><b>TOTAL PRICE</b></i>
+    <span class="item-total" id="cartTotal"><i>$0.00</i></span>
+    <br>
+    <i><b>SHIPPING</b></i>
+    <span class="item-shipping"><i>Calculated at Checkout</i></span>
+    <hr>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+    <!-- BREADCRUMBS -->
     <ul class="breadcrumb">
         <li><a href="index.html">Home</a></li>
         <li><a href="cookedrolls.html">EcoPet Cooked Rolls</a></li>
@@ -44,107 +63,101 @@
       </ul>
 <br>
 <br>
-      <main class="productcard">
-        <div class="left-column">
-          <img src="chickenveg.png" alt="Chicken and Vegetable Image">
-        </div>
-        <div class="right-column">
-          <div class="product-description">
+<
+<!-- PRODUCT CARD -->
+<main class="productcard">
+    <div class="left-column">
+        <img src="chickenveg.png" alt="Chicken and Vegetable Image">
+    </div>
+    <div class="right-column">
+        <div class="product-description">
             <span>EcoPet Fresh Cooked Rolls</span>
             <br>
             <h1>Chicken and Vegetable 1KG</h1>
             <br>
             <p>All Natural Preservative Free Cooked Chicken & Vegetables Ecopet rolls are made with natural, wholesome, human-grade ingredients. These ingredients are carefully blended, sealed into their containers, and gently low-pressure steamed. This process ensures maximum food value is retained for your pet in a convenient form. Ingredients: Whole Fresh Chicken, Bran, selected Fresh Vegetables, Rice, Garlic.</p>
-          </div>
-          <!-- courtesy of w3chools-->
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <br>
-          <div class="quantity">
+        </div>
+        <!-- courtesy of w3chools-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <br>
+        <div class="quantity">
             <label for="quantity">Quantity:</label>
             <input type="number" id="quantity" value="1">
-          </div>
-          <div class="product-price">
+        </div>
+        <div class="product-price">
             <span>$6.50</span>
-            <a href="#" class="cart-btn">Add to Cart</a>
-          </div>
-        </div>
-      </main>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div id="headerbox3"> </div>
-      <br>
-    
-    <div class="logo">
-      <img src="moreproducts.png" alt="popular" width="400" height="60" class="center">
-      <br> 
-      <br>
-  </div>
-      <div class="card-container">
-        <div class="card">
-            <a href="productpage2.html">
-                <img src="pigsear2.png" alt="Chicken and Vegetables" style="width:86%"> </a>
-            <p class="title">Pigs Ear 5 Pack</p>
-            <p class="price">$11.00</p>
-            <p>Comes in a 5 pack</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="lambveg.png" alt="Lamb and Vegetables" style="width:100%">
-            <p class="title">EcoPet Lamb and Vegtables</p>
-            <p class="price">$6.50</p>
-            <p>1 Kilogram</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="beefveg.png" alt="Beef and Vegetables" style="width:100%">
-            <p class="title">EcoPet Beef and Vegtables</p>
-            <p class="price">$6.50</p>
-            <p>1 Kilogram</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="chickenrice.png" alt="Chicken and Rice" style="width:100%">
-            <p class="title">EcoPet Chicken and Rice</p>
-            <p class="price">$6.50</p>
-            <p>1 Kilogram</p>
-            <br>
-            <p><button>Add to Cart</button></p>
+            <a href="#" class="cart-btn" onclick="addToCart('EcoPet Chicken and Vegetable 1KG', 6.50, 'chickenveg.png')">Add to Cart</a>
         </div>
     </div>
+</main>
+<br><br><br><br><br>
+<div id="headerbox3"> </div>
+<br>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <div id="headerbox3"> </div>
-    <br>
-  
+<!-- OTHER PRODUCTS -->
+<div class="logo">
+    <img src="moreproducts.png" alt="popular" width="400" height="60" class="center">
+    <br><br>
+</div>
+<div class="card-container">
+    <div class="card">
+        <a href="productpage2.html">
+            <img src="pigsear2.png" alt="Pigs Ear 5 Pack" style="width:86%"> </a>
+        <p class="title">Pigs Ear 5 Pack</p>
+        <p class="price">$11.00</p>
+        <p>Comes in a 5 pack</p>
+        <br>
+        <p><button onclick="addToCart('Pigs Ear 5 Pack', 11.00, 'pigsear2.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="lambveg.png" alt="Lamb and Vegetables" style="width:100%">
+        <p class="title">EcoPet Lamb and Vegetables</p>
+        <p class="price">$6.50</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('EcoPet Lamb and Vegetables', 6.50, 'lambveg.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="beefveg.png" alt="Beef and Vegetables" style="width:100%">
+        <p class="title">EcoPet Beef and Vegetables</p>
+        <p class="price">$6.50</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('EcoPet Beef and Vegetables', 6.50, 'beefveg.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="chickenrice.png" alt="Chicken and Rice" style="width:100%">
+        <p class="title">EcoPet Chicken and Rice</p>
+        <p class="price">$6.50</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('EcoPet Chicken and Rice', 6.50, 'chickenrice.png')">Add to Cart</button></p>
+    </div>
+</div>
 
+<br><br><br><br>
+
+<!-- SUBSCRIBE -->
 <form action="action_page.php">
     <div class="container2">
         <img src="subscribe.png" alt="whitetitle" width="700" height="50">
-   </div>
-   <div class="2" style="background-color:white">
-         <input type="text" placeholder="Name" name="name" required>
-         <input type="text" placeholder="Email address" name="mail" required>
-   </div>
-   <div class="container2">
-         <input type="submit" value="Subscribe">
-   </div>
-   </div>
-     </form>
- 
+    </div>
+    <div class="2" style="background-color:white">
+        <input type="text" placeholder="Name" name="name" required>
+        <input type="text" placeholder="Email address" name="mail" required>
+    </div>
+    <div class="container2">
+        <input type="submit" value="Subscribe">
+    </div>
+</form>
+
+
+     <!-- FOOTER -->
 <div class="bottomtext">
     <div class="bottomtext-logo">
         <img src="bottomlogo.png" alt="bottomlogo" width="600" height="65">

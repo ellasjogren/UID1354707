@@ -19,7 +19,7 @@
 <header>
     <header>
     
-    
+    <!-- HEADER -->
         <div class="container">
             <div class="menu">
                 <ul class="menu"> 
@@ -31,12 +31,31 @@
             </div>
             <div class="buttons">
                 <input type="text" placeholder="Search.." class="search">
-                <button class="cart">Cart</button>
+                <button class="cart" onclick="toggleCart()">Cart</button>
                 <button class="login">Log In</button>
             </div>
         </div>
     <br>
 
+<!-- SHOPPING CART -->
+<div class="cart-popup" id="cartPopup">
+    <img src="cart.png" width="180" height="35">
+    <hr>
+    <br>
+    <ul class="shopping-cart-items" id="cartItems"></ul>
+    <br>
+    <hr>
+    <br>
+    <i><b>TOTAL PRICE</b></i>
+    <span class="item-total" id="cartTotal"><i>$0.00</i></span>
+    <br>
+    <i><b>SHIPPING</b></i>
+    <span class="item-shipping"><i>Calculated at Checkout</i></span>
+    <hr>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+    <!-- BREADCRUMBS -->
     <ul class="breadcrumb">
         <li><a href="index.html">Home</a></li>
         <li><a href="driedtreats.html">Dried Treats</a></li>
@@ -44,6 +63,8 @@
       </ul>
 <br>
 <br>
+
+<!-- PRODUCT CARD -->
       <main class="productcard">
         <div class="left-column">
           <img src="pigsear2.png" alt="Chicken and Vegetable Image">
@@ -56,31 +77,30 @@
             <br>
             <p>All treats are preservative free and processed locally from locally sourced products, supporting local business.</p>
           </div>
-           <!-- courtesy of w3chools-->
+           <!-- courtesy of w3chools https://www.w3schools.com-->
            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
            <span class="fa fa-star checked"></span>
            <span class="fa fa-star checked"></span>
            <span class="fa fa-star checked"></span>
            <span class="fa fa-star checked"></span>
            <span class="fa fa-star"></span>
-          <div class="quantity">
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" value="1">
-          </div>
-          <div class="product-price">
-            <span>$11.00</span>
-            <a href="#" class="cart-btn">Add to Cart</a>
-          </div>
+           <br>
+            <div class="quantity">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1">
+            </div>
+            <div class="product-price">
+                <span>$11.00</span>
+                <a href="#" class="cart-btn" onclick="addToCart('Pigs Ear 5 Pack', 11.00, 'pigsear2.png')">Add to Cart</a>
+            </div>
         </div>
-      </main>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div id="headerbox3"> </div>
-      <br>
-    
+    </main>
+    <br><br><br><br><br>
+
+    <div id="headerbox3"> </div>
+    <br>
+
+      <!-- MORE PRODUCTS -->
     <div class="logo">
       <img src="moreproducts.png" alt="popular" width="400" height="60" class="center">
       <br> 
@@ -130,7 +150,7 @@
     <div id="headerbox3"> </div>
     <br>
   
-
+<!-- SUBSCRIBE -->
 <form action="action_page.php">
     <div class="container2">
         <img src="subscribe.png" alt="whitetitle" width="700" height="50">
@@ -145,6 +165,7 @@
    </div>
      </form>
  
+     <!-- FOOTER -->
 <div class="bottomtext">
     <div class="bottomtext-logo">
         <img src="bottomlogo.png" alt="bottomlogo" width="600" height="65">

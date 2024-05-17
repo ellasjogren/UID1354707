@@ -346,7 +346,7 @@ ul.breadcrumb li {
   font-family: 'Courier New';
 }
 
-/* courtesy of w3schools */
+/* courtesy of w3schools https://www.w3schools.com */
 ul.breadcrumb li+li:before {
   padding: 8px;
   color: black;

@@ -23,6 +23,7 @@
     <a href=index.html> <img src="logo.png" alt="The Pet Food Spot" width="680" height="100">
 </div>
 
+<!-- HEADER -->
 <header>
     <header>
         <div class="container">
@@ -36,11 +37,12 @@
             </div>
             <div class="buttons">
                 <input type="text" placeholder="Search.." class="search">
-                <button class="cart">Cart</button>
+                <button class="cart" onclick="toggleCart()">Cart</button>
                 <button class="login">Log In</button>
             </div>
         </div>
     
+<!-- INTRODUCTION -->
 <div id="headerbox2"> </div>
     <div class="about-us">
         <div class="subtitle">
@@ -51,79 +53,102 @@
             <img src="dograwmeat.png" alt="Image 2" width="570" height="400">    
         </div>
     </div>
+
+    <!-- SHOPPING CART -->
+<div class="cart-popup" id="cartPopup">
+    <img src="cart.png" width="180" height="35">
+    <hr>
+    <br>
+    <ul class="shopping-cart-items" id="cartItems"></ul>
+    <br>
+    <hr>
+    <br>
+    <i><b>TOTAL PRICE</b></i>
+    <span class="item-total" id="cartTotal"><i>$0.00</i></span>
+    <br>
+    <i><b>SHIPPING</b></i>
+    <span class="item-shipping"><i>Calculated at Checkout</i></span>
+    <hr>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+     <!-- BREADCRUMB -->
     <div id="headerbox3"> </div>
     <ul class="breadcrumb">
         <li><a href="index.html">Home</a></li>
         <li>Fresh Raw Meats</li>
       </ul>
 
-      <div class="card-container">
-        <div class="card">
-            <img src="beefmince1.png" alt="Beef Mince" style="width:100%">
-            <p class="title">Pure Beef Mince </p>
-            <p class="price">$8.50</p>
-            <p>1 Kilogram</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="beefmince5.png" alt="Beef Mince " style="width:100%">
-            <p class="title">Pure Beef Mince</p>
-            <p class="price">$40.75</p>
-            <p>5 Kilograms</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="beefdiced1.png" alt="Diced Beef" style="width:100%">
-            <p class="title">Pure Diced Beef</p>
-            <p class="price">$8.50</p>
-            <p>1 Kilogram</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
-            <div class="card">
-                <img src="beefdiced5.png" alt="Diced Beef" style="width:100%">
-                <p class="title">Pure Diced Beef</p>
-                <p class="price">$40.75</p>
-                <p>5 Kilograms</p>
-                <br>
-                <p><button>Add to Cart</button></p>
-            </div>
-                <div class="card">
-                    <img src="kangaroodiced1.png" alt="diced Kangaroo" style="width:100%">
-                    <p class="title">Pure Kangaroo Diced</p>
-                    <p class="price">$10.65</p>
-                    <p>1 Kilogram</p>
-                    <br>
-                    <p><button>Add to Cart</button></p>
-                </div>
-                    <div class="card">
-                        <img src="kangaroodiced5.png" alt="diced Kangaroo" style="width:100%">
-                        <p class="title">Pure Kangaroo Diced</p>
-                        <p class="price">$51.50</p>
-                        <p>5 Kilograms</p>
-                        <br>
-                        <p><button>Add to Cart</button></p>
-                    </div>
-                    <div class="card">
-                        <img src="kangaroominced5.png" alt="minced Kangaroo" style="width:100%">
-                        <p class="title">Pure Kangaroo Minced</p>
-                        <p class="price">$51.50</p>
-                        <p>5 Kilograms</p>
-                        <br>
-                        <p><button>Add to Cart</button></p>
-                 </div>
-                    <div class="card">
-                        <img src="beefpetmince1.png" alt="diced Kangaroo" style="width:100%">
-                        <p class="title">Beef Pet Mince</p>
-                        <p class="price">$7.00</p>
-                        <p>1 Kilogram</p>
-                        <br>
-                        <p><button>Add to Cart</button></p>
-                 </div>
+   <!-- PRODUCT LIST -->
+<div class="card-container">
+    <div class="card">
+        <img src="beefmince1.png" alt="Beef Mince" style="width:100%">
+        <p class="title">Pure Beef Mince </p>
+        <p class="price">$8.50</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('Pure Beef Mince', 8.50, 'beefmince1.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="beefmince5.png" alt="Beef Mince " style="width:100%">
+        <p class="title">Pure Beef Mince</p>
+        <p class="price">$40.75</p>
+        <p>5 Kilograms</p>
+        <br>
+        <p><button onclick="addToCart('Pure Beef Mince', 40.75, 'beefmince5.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="beefdiced1.png" alt="Diced Beef" style="width:100%">
+        <p class="title">Pure Diced Beef</p>
+        <p class="price">$8.50</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('Pure Diced Beef', 8.50, 'beefdiced1.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="beefdiced5.png" alt="Diced Beef" style="width:100%">
+        <p class="title">Pure Diced Beef</p>
+        <p class="price">$40.75</p>
+        <p>5 Kilograms</p>
+        <br>
+        <p><button onclick="addToCart('Pure Diced Beef', 40.75, 'beefdiced5.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="kangaroodiced1.png" alt="diced Kangaroo" style="width:100%">
+        <p class="title">Pure Kangaroo Diced</p>
+        <p class="price">$10.65</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('Pure Kangaroo Diced', 10.65, 'kangaroodiced1.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="kangaroodiced5.png" alt="diced Kangaroo" style="width:100%">
+        <p class="title">Pure Kangaroo Diced</p>
+        <p class="price">$51.50</p>
+        <p>5 Kilograms</p>
+        <br>
+        <p><button onclick="addToCart('Pure Kangaroo Diced', 51.50, 'kangaroodiced5.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="kangaroominced5.png" alt="minced Kangaroo" style="width:100%">
+        <p class="title">Pure Kangaroo Minced</p>
+        <p class="price">$51.50</p>
+        <p>5 Kilograms</p>
+        <br>
+        <p><button onclick="addToCart('Pure Kangaroo Minced', 51.50, 'kangaroominced5.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="beefpetmince1.png" alt="diced Kangaroo" style="width:100%">
+        <p class="title">Beef Pet Mince</p>
+        <p class="price">$7.00</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('Beef Pet Mince', 7.00, 'beefpetmince1.png')">Add to Cart</button></p>
+    </div>
+</div>
 
 <br>
+ <!-- SUBSCRIBE -->
 <form action="action_page.php">
     <div class="container2">
         <img src="subscribe.png" alt="whitetitle" width="700" height="50">
@@ -137,6 +162,8 @@
    </div>
    </div>
      </form>
+
+ <!-- FOOTER -->
 <div class="bottomtext">
     <div class="bottomtext-logo">
         <img src="bottomlogo.png" alt="bottomlogo" width="600" height="65">

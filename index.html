@@ -17,123 +17,103 @@
 </div>
 
 <header>
-    <header>
-    
-    
-        <div class="container">
-            <div class="menu">
-                <ul class="menu"> 
-                    <li><a href="cookedrolls.html">EcoPet Cooked Rolls</a></li>
-                    <li><a href="freshrawmeats.html">Fresh Raw Meat</a></li>
-                    <li><a href="driedtreats.html">Dried Treats</a></li>
-                </ul>
-                <br>
-            </div>
-            <div class="buttons">
-                <input type="text" placeholder="Search.." class="search">
-                <button class="cart" onclick="showCart()">Cart</button>
-                <button class="login">Log In</button>
-            </div>
+    <!-- HEADER -->
+    <div class="container">
+        <div class="menu">
+            <ul class="menu"> 
+                <li><a href="cookedrolls.html">EcoPet Cooked Rolls</a></li>
+                <li><a href="freshrawmeats.html">Fresh Raw Meat</a></li>
+                <li><a href="driedtreats.html">Dried Treats</a></li>
+            </ul>
+            <br>
         </div>
-    </header>
-    <div class="cart-popup" id="cartPopup">
-        <img src="cart.png" width="180" height="35">
-        <hr>
-        <br>
-        <br>
-        <ul class="shopping-cart-items">
-            <li class="products">
-              <img src="chickenveg.png" alt="item1" width="150" height="150"/>
-              <br>
-              <span class="item-name"><i>EcoPet Chicken and Vegetable 1KG</i></span>
-              <br>
-              <span class="item-price">$6.50</span>
-              <br>
-            </li>
-      <br>
-      <hr>
-      <br>
-            <li class="products">
-              <img src="pigsear2.png" alt="item1" width="150" height="150"/>
-              <br>
-              <span class="item-name"><i>Pigs Ear 5 Pack</i></span>
-              <br>
-              <span class="item-price">$11.00</span>
-              <br>
-            </li>
-          </ul>
-          <br>
-          <hr>
-          <br>
-          <i><b>PRICE</i></b>
-          <span class="item-total"><i>$17.50</i></span>
-          <br>
-          <i><b>SHIPPING</i></b>
-          <span class="item-shipping"><i>Calculated at Checkout</i></span>
-          <hr>
-            <button onclick="checkout()">Checkout</button>
-        </div>
-      
-    <br>
-
-    <div class="about-us">
-        <div class="subtitle">
-            <img src="subtitle.png" alt="Subtitle" width="470" height="100">
-            <p>Finding the right food for your pet can be a real challenge. At The Pet Food Spot, we provide a range of high quality dog and cat foods, including cooked rolls and a variety of fresh and pure raw meats.
-               Our products are locally sourced from the best Australian manufacturers with no nasty additives.
-               Got pets? Shop with us now!</p>
-        </div>
-        <div class="jackrussell">
-            <img src="jackrussell.png" alt="Image 2" width="500" height="265">    
+        <div class="buttons">
+            <input type="text" placeholder="Search.." class="search">
+            <button class="cart" onclick="toggleCart()">Cart</button>
+            <button class="login">Log In</button>
         </div>
     </div>
-    <div id="headerbox"> </div>
+</header>
+
+<!-- SHOPPING CART -->
+<div class="cart-popup" id="cartPopup">
+    <img src="cart.png" width="180" height="35">
+    <hr>
     <br>
-    <img src="popular.png" alt="popular" width="200" height="55" class="center">
+    <ul class="shopping-cart-items" id="cartItems"></ul>
     <br>
-<div class="logo">
+    <hr>
+    <br>
+    <i><b>TOTAL PRICE</b></i>
+    <span class="item-total" id="cartTotal"><i>$0.00</i></span>
+    <br>
+    <i><b>SHIPPING</b></i>
+    <span class="item-shipping"><i>Calculated at Checkout</i></span>
+    <hr>
+    <button onclick="checkout()">Checkout</button>
 </div>
 
+<br>
 
-<div class="card-container">
-        <div class="card">
-            <a href="productpage1.html">
-                <img src="chickenveg.png" alt="Chicken and Vegetables" style="width:100%"> </a>
-            <p class="title">EcoPet Chicken and Vegtables</p>
-            <p class="price">$6.50</p>
-            <p>1 Kilogram</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="lambveg.png" alt="Lamb and Vegetables" style="width:100%">
-            <p class="title">EcoPet Lamb and Vegtables</p>
-            <p class="price">$6.50</p>
-            <p>1 Kilogram</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="beefveg.png" alt="Beef and Vegetables" style="width:100%">
-            <p class="title">EcoPet Beef and Vegtables</p>
-            <p class="price">$6.50</p>
-            <p>1 Kilogram</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="chickenrice.png" alt="Chicken and Rice" style="width:100%">
-            <p class="title">EcoPet Chicken and Rice</p>
-            <p class="price">$6.50</p>
-            <p>1 Kilogram</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
+<!-- ABOUT US -->
+<div class="about-us">
+    <div class="subtitle">
+        <img src="subtitle.png" alt="Subtitle" width="470" height="100">
+        <p>Finding the right food for your pet can be a real challenge. At The Pet Food Spot, we provide a range of high quality dog and cat foods, including cooked rolls and a variety of fresh and pure raw meats.
+           Our products are locally sourced from the best Australian manufacturers with no nasty additives.
+           Got pets? Shop with us now!</p>
     </div>
+    <div class="jackrussell">
+        <img src="jackrussell.png" alt="Image 2" width="500" height="265">    
+    </div>
+</div>
+<div id="headerbox"> </div>
+<br>
+<img src="popular.png" alt="popular" width="200" height="55" class="center">
+<br>
+<div class="logo"></div>
+
+<!-- POPULAR PRODUCTS -->
+<div class="card-container">
+    <div class="card">
+        <a href="productpage1.html">
+            <img src="chickenveg.png" alt="Chicken and Vegetables" style="width:100%"> </a>
+        <p class="title">EcoPet Chicken and Vegetables</p>
+        <p class="price">$6.50</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('EcoPet Chicken and Vegetables', 6.50, 'chickenveg.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="lambveg.png" alt="Lamb and Vegetables" style="width:100%">
+        <p class="title">EcoPet Lamb and Vegetables</p>
+        <p class="price">$6.50</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('EcoPet Lamb and Vegetables', 6.50, 'lambveg.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="beefveg.png" alt="Beef and Vegetables" style="width:100%">
+        <p class="title">EcoPet Beef and Vegetables</p>
+        <p class="price">$6.50</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('EcoPet Beef and Vegetables', 6.50, 'beefveg.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="chickenrice.png" alt="Chicken and Rice" style="width:100%">
+        <p class="title">EcoPet Chicken and Rice</p>
+        <p class="price">$6.50</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('EcoPet Chicken and Rice', 6.50, 'chickenrice.png')">Add to Cart</button></p>
+    </div>
+</div>
 <br>
 <br>
 
-    <div id="headerbox4"></div>
+<!-- OUR STORY HEADERBOX  -->
+<div id="headerbox4"></div>
 <div class="our-story">
     <div class="dogimage">
         <img src="dog2.png" alt="dog2" width="600" height="600">
@@ -142,18 +122,18 @@
         <img src="aboutus.png" alt="whitetitle" width="265" height="65">
         <p>Welcome to The Pet Food Spot.
 
-            With an abundant supply of high-quality fresh food for your pet, we offer an excellent online pet food shopping experience for the customer who wants the best for their pet.
-            
-            In addition to fresh foods we also have a wide range of treats made from wholesome local ingredients to give your feline and canine friends the nutrients they need to stay happy and healthy.
-            
-            We offer a timely delivery services across Metropolitan Melbourne, Geelong and Country Victoria.
-            
-            Pet food shopping has never been so easy and convenient!</p>   
+        With an abundant supply of high-quality fresh food for your pet, we offer an excellent online pet food shopping experience for the customer who wants the best for their pet.
+        
+        In addition to fresh foods we also have a wide range of treats made from wholesome local ingredients to give your feline and canine friends the nutrients they need to stay happy and healthy.
+        
+        We offer a timely delivery services across Metropolitan Melbourne, Geelong and Country Victoria.
+        
+        Pet food shopping has never been so easy and convenient!</p>   
     </div>
 </div>
 <br>
 
-
+<!-- SUBSCRIBE -->
 <form action="action_page.php">
     <div class="container2">
         <img src="subscribe.png" alt="whitetitle" width="700" height="50">
@@ -165,11 +145,9 @@
    <div class="container2">
          <input type="submit" value="Subscribe">
    </div>
-   </div>
-     </form>
- 
-     
+</form>
 
+<!-- FOOTER -->
 <div class="bottomtext">
     <div class="bottomtext-logo">
         <img src="bottomlogo.png" alt="bottomlogo" width="600" height="65">
@@ -182,9 +160,7 @@
         <li><a href="#TermsofUse">Terms of Use</a></li>
         <li><a href="#SiteMap">Site Map</a></li>
     </ul>
-    
 </div>
-</header>
 
 <script src="script.js"></script>
 </body>

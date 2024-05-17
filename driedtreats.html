@@ -23,6 +23,7 @@
     <a href=index.html> <img src="logo.png" alt="The Pet Food Spot" width="680" height="100">
 </div>
 
+<!-- HEADER -->
 <header>
     <header>
         <div class="container">
@@ -36,11 +37,12 @@
             </div>
             <div class="buttons">
                 <input type="text" placeholder="Search.." class="search">
-                <button class="cart">Cart</button>
+                <button class="cart" onclick="toggleCart()">Cart</button>
                 <button class="login">Log In</button>
             </div>
         </div>
     
+<!-- INTRODUCTION -->
 <div id="headerbox2"> </div>
     <div class="about-us">
         <div class="subtitle">
@@ -54,39 +56,64 @@
     <br>
     <br>
     <br>
+
+ <!-- SHOPPING CART -->
+<div class="cart-popup" id="cartPopup">
+    <img src="cart.png" width="180" height="35">
+    <hr>
+    <br>
+    <ul class="shopping-cart-items" id="cartItems"></ul>
+    <br>
+    <hr>
+    <br>
+    <i><b>TOTAL PRICE</b></i>
+    <span class="item-total" id="cartTotal"><i>$0.00</i></span>
+    <br>
+    <i><b>SHIPPING</b></i>
+    <span class="item-shipping"><i>Calculated at Checkout</i></span>
+    <hr>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+    <!-- BREADCRUMB -->
     <div id="headerbox3"> </div>
     <ul class="breadcrumb">
         <li><a href="index.html">Home</a></li>
         <li>Dried Treats</li>
       </ul>
 
-      <div class="card-container">
-        <div class="card">
-            <img src="beefliver.png" alt="Beef Liver" style="width:100%">
-            <p class="title">Dried Beef Liver</p>
-            <p class="price">$30.00</p>
-            <p>1 Kilogram</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <a href="productpage2.html">
-                <img src="pigsear2.png" alt="Chicken and Vegetables" style="width:100%"> </a>
-            <p class="title">Pigs Ear 5 Pack</p>
-            <p class="price">$11.00</p>
-            <p>Comes in a 5 pack</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="tendon.png" alt="Tendons" style="width:100%">
-            <p class="title">Tendons Large</p>
-            <p class="price">$9.90</p>
-            <p>4 Pack</p>
-            <br>
-            <p><button>Add to Cart</button></p>
-        </div>
+ <!-- PRODUCT LIST -->
+ <div class="card-container">
+    <div class="card">
+        <img src="beefliver.png" alt="Beef Liver" style="width:100%">
+        <p class="title">Dried Beef Liver</p>
+        <p class="price">$30.00</p>
+        <p>1 Kilogram</p>
+        <br>
+        <p><button onclick="addToCart('Dried Beef Liver', 30.00, 'beefliver.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <a href="productpage2.html">
+            <img src="pigsear2.png" alt="Pigs Ear 5 Pack" style="width:100%"> 
+        </a>
+        <p class="title">Pigs Ear 5 Pack</p>
+        <p class="price">$11.00</p>
+        <p>Comes in a 5 pack</p>
+        <br>
+        <p><button onclick="addToCart('Pigs Ear 5 Pack', 11.00, 'pigsear2.png')">Add to Cart</button></p>
+    </div>
+    <div class="card">
+        <img src="tendon.png" alt="Tendons" style="width:100%">
+        <p class="title">Tendons Large</p>
+        <p class="price">$9.90</p>
+        <p>4 Pack</p>
+        <br>
+        <p><button onclick="addToCart('Tendons Large', 9.90, 'tendon.png')">Add to Cart</button></p>
+    </div>
+</div>
 
+
+ <!-- SUBSCRIBE -->
 <br>
 <form action="action_page.php">
     <div class="container2">
@@ -101,6 +128,9 @@
    </div>
    </div>
      </form>
+
+
+     <!-- FOOTER -->
 <div class="bottomtext">
     <div class="bottomtext-logo">
         <img src="bottomlogo.png" alt="bottomlogo" width="600" height="65">
