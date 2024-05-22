@@ -50,3 +50,6 @@ function updateCart() {
 
     cartTotal.innerHTML = `<i>$${total.toFixed(2)}</i>`;
 }
+function checkout() {
+    window.location.href = 'checkout.html';
+}

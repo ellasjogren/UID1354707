@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pet Food Spot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="headerbox">
+    </div>
+<br>
+<div class="logo">
+    <img src="logo.png" alt="The Pet Food Spot" width="680" height="100">
+</div>
+
+<header>
+    <!-- HEADER -->
+    <div class="container">
+        <div class="menu">
+            <ul class="menu"> 
+                <li><a href="cookedrolls.html">EcoPet Cooked Rolls</a></li>
+                <li><a href="freshrawmeats.html">Fresh Raw Meat</a></li>
+                <li><a href="driedtreats.html">Dried Treats</a></li>
+            </ul>
+            <br>
+        </div>
+        <div class="buttons">
+            <input type="text" placeholder="Search.." class="search">
+            <button class="cart" onclick="toggleCart()">Cart</button>
+            <button class="login">Log In</button>
+        </div>
+    </div>
+</header>
+<div id="headerbox3"></div>
+<!-- SHOPPING CART -->
+<div class="cart-popup" id="cartPopup">
+    <img src="cart.png" width="180" height="35">
+    <hr>
+    <br>
+    <ul class="shopping-cart-items" id="cartItems"></ul>
+    <br>
+    <hr>
+    <br>
+    <i><b>TOTAL PRICE</b></i>
+    <span class="item-total" id="cartTotal"><i>$0.00</i></span>
+    <br>
+    <i><b>SHIPPING</b></i>
+    <span class="item-shipping"><i>Calculated at Checkout</i></span>
+    <hr>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="main-form">
+      <div class="checkout-container">
+        <form action="/action_page.php">
+            <br>
+            <img src="checkout.png" width="270" height="50">
+            <br>
+            <br>
+            <hr>
+            <br>
+          <div class="row">
+            <div class="checkout-form">
+              <h3>Billing Address</h3>
+              <br>
+              <label for="fname"><i class="fa fa-user"></i> FULL NAME</label>
+              <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+              <label for="email"><i class="fa fa-envelope"></i> EMAIL</label>
+              <input type="text" id="email" name="email" placeholder="john@example.com">
+              <label for="adr"><i class="fa fa-address-card-o"></i> ADDRESS</label>
+              <input type="text" id="adr" name="address" placeholder="111 Smith Street Fitzroy">
+              <label for="city"><i class="fa fa-institution"></i> CITY</label>
+              <input type="text" id="city" name="city" placeholder="Melbourne">
+  
+              <div class="row">
+                <div class="checkout-form">
+                  <label for="state">STATE</label>
+                  <input type="text" id="state" name="state" placeholder="VIC">
+                </div>
+                <div class="checkout-form">
+                  <label for="zip">POSTAL CODE</label>
+                  <input type="text" id="zip" name="zip" placeholder="10001">
+                </div>
+              </div>
+            </div>
+  
+            <div class="checkout-form">
+              <h3>Payment</h3>
+              <br>
+              <label for="cname">NAME ON CARD</label>
+              <input type="text" id="cname" name="cardname" placeholder="John Doe">
+              <label for="ccnum">CREDIT CARD NUMBER</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <label for="expmonth">EXPIRY MONTH</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="September">
+  
+              <div class="row">
+                <div class="checkout-form">
+                  <label for="expyear">EXPIRY YEAR</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2026">
+                </div>
+                <div class="checkout-form">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+              </div>
+            </div>
+  
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <input type="submit" value="Continue to checkout" class="btn">
+        </form>
+      </div>
+    </div>
+  
+    <div class="checkout-form2">
+      <div class="checkout-container">
+        <img src="cart.png" width="180" height="35">
+        <br>
+          <span class="price" style="color:black">
+            <i class="fa fa-shopping-cart"></i> 
+          </span>
+        </h4>
+        <p><a href="productpage1.html">EcoPet Chicken and Vegetable 1KG</a></p>
+        <img src="chickenveg.png" alt="Lamb and Vegetables" style="width:100%">
+        <span class="price">$6.50</span>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+
+        <p><a href="productpage2.html">Pigs Ear 5 Pack</a></p>
+        <img src="pigsear2.png" alt="Lamb and Vegetables" style="width:100%">
+        <span class="price">$11.00</span>
+        <br>
+        <br>
+        <hr>
+        <br>
+       
+        <i><b>PRICE</b></i>
+        <span class="item-total" id="cartTotal"><i>$17.50</i></span>
+        <br>
+        <i><b>SHIPPING</b></i>
+        <span class="item-shipping"><i>$8.00</i></span>
+        <hr>
+        <i><b>TOTAL PRICE</b></i>
+        <span class="item-total" id="cartTotal"><i>$25.50</i></span>
+        <br>
+      </div>
+    </div>
+  </div>
+
+<br>
+<br>
+
+    
+<!-- FOOTER -->
+<div class="bottomtext">
+    <div class="bottomtext-logo">
+        <img src="bottomlogo.png" alt="bottomlogo" width="600" height="65">
+        <br>
+        <br>
+        <p>Explore Our Innovative Pet Food Products!</p>
+    </div>
+    <ul class="bottommenu-list"> 
+        <li><a href="#PrivacyPolicy">Privacy Policy</a></li>
+        <li><a href="#TermsofUse">Terms of Use</a></li>
+        <li><a href="#SiteMap">Site Map</a></li>
+    </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
