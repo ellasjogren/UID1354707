@@ -36,9 +36,12 @@
 }
 
 /* LOGO */
+
+@media only screen and (max-width: 390px), (max-height: 844px) {
 .logo {
   text-align: center;
   max-width: 100%;
+}
 }
 
 @media only screen and (max-width: 390px), (max-height: 844px) {
