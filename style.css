@@ -32,9 +32,11 @@
   max-width: 100%;
 }
 
+@media (max-width: 600px) {
 .logo img {
   max-width: 100%;
   height: auto;
+}
 }
 
 /* HEADER */
@@ -259,10 +261,11 @@
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
 .bottomtext-logo img {
   margin-right: 20px;
 }
-
+}
 .bottommenu-list {
   list-style-type: none;
   margin: 0;
@@ -287,7 +290,7 @@
   color: purple;
 }
 
-@media (max-width: 600px) {
+
   .bottomtext {
     flex-direction: column;
     text-align: center;
@@ -305,9 +308,10 @@
     display: block;
     margin: 10px 0;
   }
-}
+
 
 /* FORM */
+@media only screen and (max-width: 600px) {
 .container2 {
   padding: 20px;
 }
@@ -330,13 +334,14 @@ input[type=submit] {
 input[type=submit]:hover {
   opacity: 0.8;
 }
-
+}
+@media only screen and (max-width: 600px) {
 .subscribetitle {
   font-family: 'Courier New';
   font-size: 17px;
   color: black;
 }
-
+}
 /* BREADCRUMB */
 ul.breadcrumb {
   padding: 10px 16px;
