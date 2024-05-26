@@ -1,12 +1,3 @@
-/* General styles */
-@media only screen and (max-width: 390px), (max-height: 844px) {
-  /* Adjustments for elements to fit within iPhone 12 Pro viewport */
-  body {
-    font-size: 14px; /* Example: Adjust font size for better readability */
-  }
-
-  /* Add more adjustments as needed for specific elements */
-
 
 * {
   margin: 0;
@@ -501,6 +492,4 @@ span.price {
     width: 100%;
     padding: 0;
   }
-}
-
 }
